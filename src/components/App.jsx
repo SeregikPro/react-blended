@@ -5,6 +5,7 @@ import HomeView from 'pages/HomeView';
 import EventView from 'pages/EventView';
 import EventSubView from './EventSubView/EventSubView';
 import EventDetailsView from 'pages/EventDetailsView';
+import NotFoundView from 'pages/NotFoundView';
 
 export const App = () => {
   return (
@@ -15,7 +16,7 @@ export const App = () => {
           <Route path=":eventId" element={<EventSubView />} />
         </Route>
         <Route path="events/:eventId/details" element={<EventDetailsView />} />
-        {/* <Route path="*" element={<NotFoundView />} /> */}
+        <Route path="*" element={<NotFoundView />} />
       </Route>
     </Routes>
   );
